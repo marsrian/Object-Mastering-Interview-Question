@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is not confused anymore</h1>
+    <p onclick="this.innerText= 'you clicked'">I am a Paragraph. do'nt click me</p>
+    <script>
+        const myObj = {
+            name: 'Shamsul Houque',
+            getFullName: function() {
+                console.log(this);
+                return 'Mr. ' + this.name;
+            }
+        }
+        const anotherObj = {
+                name: 'Abedin Joni',
+            }
+            // setTimeout(function() {
+            //         console.log(this);
+            //     }, 1000)
+
+        // anotherObj.getFullName = myObj.getFullName
+        // console.log(anotherObj.getFullName);
+
+        // anotherObj.getFullName();
+        // myObj.getFullName();
+
+        function add(a, b) {
+            console.log(this);
+            return a + b;
+        }
+        add(10, 30);
+
+        anotherObj.sum = add;
+        anotherObj.sum();
+    </script>
+</body>
+
+</html>
